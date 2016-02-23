@@ -18,11 +18,13 @@ rb-appscript broke against iTunes, and later against the Finder. There's no reas
 
 Thanks to kch for fixing the rb-appscript gemspec. If for any reason you still can't install as a gem, install manually (into the Ruby library), like this:
 
-    $ cd /path/to/trunk
-    $ ruby extconf.rb
-    $ make
-    $ make install
-
+    git clone git@github.com:retrography/appscript.git
+    cd appscript/rb-appscript/trunk
+    ruby extconf.rb
+    make
+    make install
+    gem build ./rb-appscript.gemspec
+    gem install ./rb-appscript-0.6.1.gem
 
 — Matt Neuburg
 
